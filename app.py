@@ -39,7 +39,7 @@ def get_output():
     if request.method == 'POST':
         img = request.files['file']
 
-        img_path = "static/" + img.filename	
+        img_path = os.getcwd() + "//static//" + img.filename	
         img.save(img_path)
 
         a = pridict(img_path)
